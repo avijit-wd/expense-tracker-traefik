@@ -56,7 +56,7 @@ function AuthPage() {
         
         {/* Page Title */}
         <h2 className="text-3xl font-bold text-center text-amber-500 mb-4">
-          {isSignup ? "Sign Up" : "Log In"}
+          {isSignup ? "Sign Up" : "Sign In"}
         </h2>
 
         {/* Display error message if any */}
@@ -101,7 +101,7 @@ function AuthPage() {
             type="submit"
             className="w-full bg-amber-500 text-gray-900 p-2 rounded hover:bg-amber-600 transition"
           >
-            {isSignup ? "Sign Up" : "Log In"}
+            {isSignup ? "Sign Up" : "Sign In"}
           </button>
         </form>
 
@@ -112,7 +112,7 @@ function AuthPage() {
             onClick={() => setIsSignup(!isSignup)}
             className="text-amber-500 underline"
           >
-            {isSignup ? "Log in" : "Sign up"}
+            {isSignup ? "Sign in" : "Sign up"}
           </button>
         </p>
       </div>

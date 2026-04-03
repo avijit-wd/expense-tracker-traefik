@@ -1,5 +1,5 @@
 # Stage 1: Build the frontend using Node.js
-FROM node:23 AS builder
+FROM node:23 AS builder 
 
 # Accept the API base URL as a build-time argument (used for configuring the frontend)
 ARG VITE_API_BASE_URL

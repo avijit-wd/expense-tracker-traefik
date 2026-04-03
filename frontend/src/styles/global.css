@@ -1,0 +1,11 @@
+/* ==============================
+   Global Styles
+   ============================== */
+
+/* Import TailwindCSS */
+@import "tailwindcss";
+
+/* Ensures date input picker icon is visible in dark mode */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}

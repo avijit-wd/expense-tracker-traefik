@@ -1,0 +1,9 @@
+# Don't copy the Dockerfile itself
+Dockerfile
+
+# Local dependencies and build output
+node_modules
+dist
+
+# macOS system files
+.DS_Store

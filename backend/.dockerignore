@@ -1,0 +1,12 @@
+# Dockerfile not needed inside image
+Dockerfile
+
+# Local Python virtual environments
+venv
+.venv
+
+# macOS metadata file
+.DS_Store
+
+# Python cache and compiled files
+__pycache__/

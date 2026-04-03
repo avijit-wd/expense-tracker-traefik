@@ -1,0 +1,28 @@
+services:
+  frontend:
+    image: node:23
+    volumes:
+      - ./frontend:/app
+    environment:
+      - VITE_API_BASE_URL=/api
+    command: sh -c "cd /app && npm install --frozen-lockfile && npm run dev"
+    expose:
+      - 5173
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.frontend.rule=PathPrefix(`/`)"
+      - "traefik.http.routers.frontend.entrypoints=web"
+
+  backend:
+    image: python:3.12
+    volumes:
+      - ./backend:/app
+    command: sh -c "cd /app && pip install -r requirements.txt && uvicorn app.main:app --host 0.0.0.0 --port 5001 --reload"
+    expose:
+      - 5001
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.backend.rule=PathPrefix(`/api`)"
+      - "traefik.http.routers.backend.entrypoints=web"
+    environment:
+      - DATABASE_HOST=db

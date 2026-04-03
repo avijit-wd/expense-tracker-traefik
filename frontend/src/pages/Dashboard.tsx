@@ -55,7 +55,7 @@ function Dashboard() {
               setIsModalOpen(true);
             }}
           >
-            ➕ New Expense
+            ➕ New Kharcha
           </button>
         </div>
 

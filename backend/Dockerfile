@@ -3,7 +3,7 @@ FROM python:3.12-slim
 
 RUN apt update && apt install -y curl && apt clean && rm -rf /var/lib/apt/lists/*
 # Set the working directory inside the container to /app
-WORKDIR /app
+WORKDIR /app 
 
 # Copy only the requirements file first (for better layer caching)
 COPY requirements.txt .

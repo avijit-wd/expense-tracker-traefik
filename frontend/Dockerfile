@@ -2,7 +2,7 @@
 FROM node:23 AS builder 
 
 # Accept the API base URL as a build-time argument (used for configuring the frontend)
-ARG VITE_API_BASE_URL
+ARG VITE_API_BASE_URL 
 
 # Set the working directory inside the container
 WORKDIR /app
